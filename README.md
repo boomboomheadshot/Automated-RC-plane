@@ -1,4 +1,5 @@
-//# Automated-RC-plane by Shivank Kumar n Atul Saurav 
+//# Automated-RC-plane by Shivank Kumar n Atul Saurav
+//#ITSP project 2015. TEAM Vortex.
 //It contains the final code for our attitude holding RC plane..
 //library used
 
@@ -101,7 +102,7 @@ sr.attach(11);
 //PID roll control
 er=0-roll;
 sumr=sumr+er;
-CV=90+(kp*er+ki*sumr+kd*(er-er0));
+CV=90-(kp*er+ki*sumr+kd*(er-er0));
 sr.write(CV);
 Serial.print(CV); Serial.print("\t");
 
